@@ -28,7 +28,7 @@ class ApplicationContextBasicFindTest {
         MemberService memberService = ac.getBean("memberService", MemberServiceImpl.class);
         // 인터페이스로 조회한다면, 인터페이스의 구현체 클래스가 대상체가 된다.
         // 따라서 해당 인터페이스의 구현체 클래스로 getBean해도 문제가 없다.
-        // 그러나 구현체 클래스로 getBean한다면 구현에 의존하는것이기 때문에 좋은 코드는 아니다..
+        // 그러나 구현체 클래스로 getBean한다면 구현에 의존하는것이기 때문에 좋은 코드는 아니다.
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
 
@@ -47,7 +47,5 @@ class ApplicationContextBasicFindTest {
                 ()-> ac.getBean("xxxx", MemberService.class));
         // 빈 이름이 컨테이너에 없다면 실패해야한다.
      }
-
-
 
 }
