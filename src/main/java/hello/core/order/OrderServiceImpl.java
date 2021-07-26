@@ -15,6 +15,7 @@ public class OrderServiceImpl implements OrderService{
 
     private final DiscountPolicy discountPolicy;
     private final MemberRepository memberRepository;
+
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy){
         this.discountPolicy = discountPolicy;
         this.memberRepository = memberRepository;
@@ -26,5 +27,10 @@ public class OrderServiceImpl implements OrderService{
         int discountPrcie = discountPolicy.discount(member,itemPrice);
 
         return new Order(memberId,itemName, itemPrice, discountPrcie);
+    }
+
+    // 테스트용
+    public MemberRepository getMemberRepository(){
+        return memberRepository;
     }
 }
