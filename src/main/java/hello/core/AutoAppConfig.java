@@ -33,9 +33,12 @@ import org.springframework.context.annotation.FilterType;
 )
 public class AutoAppConfig {
 
+        /**
         @Bean(name = "memoryMemberRepository")
         MemberRepository memberRepository(){
                 return new MemoryMemberRepository();
         }
+         컴포넌트 스캔햇을때 bean이름이 같아서 충돌을 일으키는 경우
+        **/
 
 }

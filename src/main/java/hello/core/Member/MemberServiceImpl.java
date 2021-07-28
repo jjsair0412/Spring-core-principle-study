@@ -11,7 +11,7 @@ public class MemberServiceImpl implements MemberService{
     // MemoryMemberRepository에 있는 메서드가 실행되게 된다.
     private MemberRepository memberRepository;
 
-    @Autowired
+    @Autowired // 생성자 주입
     public MemberServiceImpl(MemberRepository memberRepository){
         this.memberRepository = memberRepository;
     }
