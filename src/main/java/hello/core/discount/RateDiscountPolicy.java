@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Qualifier("mainDiscountPolicy")
+@Qualifier("mainDiscountPolicy")
 //@Qualifier 이름 설정
 public class RateDiscountPolicy implements DiscountPolicy{
     private int discountPercent = 10;
