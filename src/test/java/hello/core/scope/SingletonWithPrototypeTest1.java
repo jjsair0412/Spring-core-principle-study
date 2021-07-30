@@ -37,8 +37,9 @@ public class SingletonWithPrototypeTest1 {
         assertThat(count1).isEqualTo(1);
 
         ClientBean clientBean2 = ac.getBean(ClientBean.class);
-        int count2 = clientBean1.logic();
+        int count2 = clientBean2.logic();
         /**
+         * 실패했을 경우의 test코드
         assertThat(count2).isEqualTo(2);**/
 
         /**
