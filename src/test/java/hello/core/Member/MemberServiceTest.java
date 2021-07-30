@@ -5,6 +5,8 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class MemberServiceTest {
 
 
@@ -27,6 +29,6 @@ public class MemberServiceTest {
 
         // then
         // 같은지 검증하는 메서드
-        Assertions.assertThat(memberA).isEqualTo(findMember);
+        assertThat(memberA).isEqualTo(findMember);
     }
 }
